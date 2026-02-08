@@ -11,6 +11,8 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument('-s', '--silent', action=argparse.BooleanOptionalAction, default=False)
+parser.add_argument('-c', '--share', dest="share_enabled", action=argparse.BooleanOptionalAction, default=False)
+
 args = parser.parse_args()
 
 if args.silent: 
@@ -95,7 +97,7 @@ def main():
 
 		refresh_button.click(fn=refresh_dropdowns, outputs=[rvc_dropdown, voice_dropdown])
 
-	interface.launch(server_name="0.0.0.0", server_port=5000, quiet=True)
+	interface.launch(server_name="0.0.0.0", server_port=5000, quiet=True, share=args.share_enabled)
 
 # delete later
 
