@@ -3,9 +3,9 @@ faiss_cpu>=1.7.4
 git+https://github.com/BF667-IDLE/gradio.git
 librosa==0.10.0
 praat-parselmouth
-pyworld==0.3.4
-Requests==2.31.0
+pyworld
+Requests
 scipy>=1.11.4
-torch==2.1.0
+torch
 torchcrepe==0.0.24
 TTS==0.21.1
